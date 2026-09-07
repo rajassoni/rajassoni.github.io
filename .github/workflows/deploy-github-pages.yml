@@ -21,9 +21,6 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Dart Sass
-        run: sudo snap install dart-sass
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -38,6 +35,12 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
+
+
+      - name: Setup Dart Sass
+        run: sudo snap install dart-sass
+
+      
       - run: |
           npm run hugo -- --minify --baseURL "https://${REPO_OWNER}.github.io/${REPO_NAME}"
 
