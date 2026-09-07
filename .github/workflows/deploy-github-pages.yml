@@ -8,7 +8,7 @@ on:
   pull_request:
 
 env:
-  REPO_NAME: 'rajassoni.github.io'
+  REPO_NAME: ''
   REPO_OWNER: 'rajassoni'
 
 jobs:
