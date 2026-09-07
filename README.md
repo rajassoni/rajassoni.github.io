@@ -1,5 +1,7 @@
 # Docsy Example
 
+
+
 [Docsy][] is a [Hugo theme module][] for technical documentation sites,
 providing easy site navigation, structure, and more. This **Docsy Example
 Project** pulls in the Docsy theme as a Hugo module, together with its
