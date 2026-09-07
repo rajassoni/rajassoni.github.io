@@ -36,13 +36,11 @@ jobs:
 
       - run: npm ci
 
-
       - name: Setup Dart Sass
         run: sudo snap install dart-sass
-
       
       - run: |
-          npm run hugo -- --minify --baseURL "https://${REPO_OWNER}.github.io/${REPO_NAME}"
+          npm run hugo -- --minify --baseURL "https://${REPO_OWNER}.github.io/${REPO_NAME}" --environment production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
