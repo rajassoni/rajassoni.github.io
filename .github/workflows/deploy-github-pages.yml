@@ -36,8 +36,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Setup Dart Sass
-        run: sudo snap install dart-sass
+      - name: Install Dart Sass
+        uses: chbagniv/setup-dart-sass@v1
+        with:
+          version: '1.77.0' # Adjust to the latest stable or the version your Docsy theme requires
+
       
       - run: |
           npm run hugo -- --minify --baseURL "https://${REPO_OWNER}.github.io/${REPO_NAME}" --environment production
